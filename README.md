@@ -34,7 +34,7 @@ start out early. Most of the parts are coded for you so it should be easy enough
 scikit-learn.
 
 Use different kernels (atleast 3) and perform experiments with different hyperparameters. _This is mandatory_.
-You need to report the accuracy, precision, recall and F-1 score for the test data, corresponsing to __each__
+You need to report the accuracy, precision, recall and F-1 score for the validation data, corresponsing to __each__
 experiment that you perform. The data is divided into five train/validation splits for which the code is already written.
 Hence, you will get five sets of values for the above metrics. You should report the _average_ over all the five splits.
 
@@ -80,7 +80,7 @@ start out early. Most of the parts are coded for you so it should be easy enough
 scikit-learn.
 
 Use different kernels (atleast 3) and perform experiments with different hyperparameters. _This is mandatory_.
-You need to report the accuracy, precision, recall and F-1 score for the test data, corresponsing to __each__
+You need to report the accuracy, precision, recall and F-1 score for the validation data, corresponsing to __each__
 experiment that you perform. The data is divided into five train/validation splits for which the code is already written.
 Hence, you will get five sets of values for the above metrics. You should report the _average_ over all the five splits.
 
