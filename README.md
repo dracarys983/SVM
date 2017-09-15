@@ -104,6 +104,7 @@ SVM/
 |
 |--- cifar-10/
 |    |
+|    |--- data_batch_*
 |    |--- image_classification_svm.py
 |    |--- image_classification_svm_submission.py
 |    |
