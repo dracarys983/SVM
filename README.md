@@ -15,7 +15,7 @@ letter, hpos, vpos, w, h, #pix, xbar, ybar, x2bar, y2bar, xybar, x2ybr, xy2br, x
 ```
 All of the 16 features are integers with values betwen 0-15.
 
-You have to design a SVM classifier for the given data. The file `letter_recognition_svm.py` is your code
+You have to design a SVM classifier for the given data. The file `letter_classification_svm.py` is your code
 file for this part. __You are provided with some parts of the pipeline, while some parts are left for you to
 code__. The parts where you need to write the code look like this:
 
@@ -40,12 +40,12 @@ Hence, you will get five sets of values for the above metrics. You should report
 
 The output of your code file should have one line with the four metric values for the best model:
 ```
--> python letter_recognition_svm.py
+-> python letter_classification_svm.py
 <accuracy_val>, <precision_val>, <recall_val>, <F-1_val>
 ```
 Mention your experiments and observations in your _final report_. 
 
-Once you know which model and hyperparameters work best, create that model in `letter_recognition_svm_submission.py`,
+Once you know which model and hyperparameters work best, create that model in `letter_classification_svm_submission.py`,
 which is your final submission file. This will be tested on an unseen part of the dataset for testing it's effectiveness.
 The output format for this code is similar to the output of your best model as shown above.
 
@@ -86,12 +86,12 @@ Hence, you will get five sets of values for the above metrics. You should report
 
 The output of your code file should have one line with the four metric values for the best model:
 ```
--> python letter_recognition_svm.py
+-> python image_classification_svm.py
 <accuracy_val>, <precision_val>, <recall_val>, <F-1_val>
 ```
 Mention your experiments and observations in your _final report_. 
 
-Once you know which model and hyperparameters work best, create that model in `letter_recognition_svm_submission.py`,
+Once you know which model and hyperparameters work best, create that model in `image_classification_svm_submission.py`,
 which is your final submission file. This will be tested on an unseen part of the dataset for testing it's effectiveness.
 The output format for this code is similar to the output of your best model as shown above.
 
