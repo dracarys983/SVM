@@ -132,3 +132,9 @@ SVM/
 
 __Keep your dataset files in the respective folder for the task__. 
 
+The files provided in the visualization examples folder is for understanding purposes and might help you gain insights about
+the working of the SVM and how the dataset looks like. t-SNE plot script for CIFAR-10 is not provided but you can modify the
+given script of get it online somewhere if you really want to visualize the t-SNE embeddings for it.
+
+
+ALL THE BEST!
