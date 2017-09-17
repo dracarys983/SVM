@@ -175,4 +175,5 @@ Your submission should execute to completion (for both image classification and 
 __ALL THE BEST!__
 
 
-> If you are going through hell, keep going!\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ _- Sir Winston Churchill_
+> ### If you are going through hell, keep going!                                     
+>                                                 __- Sir Winston Churchill__
