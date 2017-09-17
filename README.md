@@ -49,53 +49,6 @@ Once you know which model and hyperparameters work best, create that model in `l
 which is your final submission file. This will be tested on an unseen part of the dataset for testing it's effectiveness.
 The output format for this code is similar to the output of your best model as shown above.
 
-
-### Image classification using Support Vector Machines
-
-In this part of the question, you will do image classification on CIFAR-10. For the SVM, simple raw pixel values can be
-used as features or you can get adventurous _(which is appreciated and encouraged)_ and do some good engineering. There
-is one bonus part which I will mention at the end of this section. The dataset has been taken from [here](https://www.cs.toronto.edu/~kriz/cifar.html).
-You can read the dataset format there and have more information about the dataset.
-
-You have to design a SVM classifier for this task. The instructions are pretty much similar to letter classification task.
-The code files for this part are `image_classification_svm.py` and `image_classification_svm_submission.py`. The instructions
-for this part are similar to the letter classification task except that now instead of _one_ input file, the input data has
-been divided into _five_ parts and you have to read the five files into one array. To be clear though, here are the details:
-
-This dataset contains five files (data\_batch\_1, .., data\_batch\_5) which are to be read such that all data is used for the train
-and validation splits. __You are provided with some parts of the pipeline, while some parts are left for you to
-code__. The parts where you need to write the code look like this:
-
-```
-======================================================================
-
-# YOUR CODE GOES HERE
-
-======================================================================
-```
-
-You are allowed to use scikit-learn for the SVM and any other python libraries for processing your data.
-__DO NOT USE ANY OTHER LIBRARY THAN SCIKIT-LEARN FOR SVM__. You are not allowed to use MATLAB for this
-question. You have to learn how to use scikit-learn and python due to which I would suggest that the students
-start out early. Most of the parts are coded for you so it should be easy enough once you know how to use
-scikit-learn.
-
-Use different kernels (atleast 3) and perform experiments with different hyperparameters. _This is mandatory_.
-You need to report the accuracy, precision, recall and F-1 score for the validation data, corresponsing to __each__
-experiment that you perform. The data is divided into five train/validation splits for which the code is already written.
-Hence, you will get five sets of values for the above metrics. You should report the _average_ over all the five splits.
-
-The output of your code file should have one line with the four metric values for the best model:
-```
--> python image_classification_svm.py --data_dir='<path_to_dataset_dir>'
-<accuracy_val>, <precision_val>, <recall_val>, <F-1_val>
-```
-Mention your experiments and observations in your _final report_. 
-
-Once you know which model and hyperparameters work best, create that model in `image_classification_svm_submission.py`,
-which is your final submission file. This will be tested on an unseen part of the dataset for testing it's effectiveness.
-The output format for this code is similar to the output of your best model as shown above.
-
 ### Directory Structure
 
 When you clone this repository, you will get the following directory structure:
@@ -103,12 +56,6 @@ When you clone this repository, you will get the following directory structure:
 ```
 SVM/
 |
-|--- cifar-10/
-|    |
-|    |--- data_batch_*
-|    |--- image_classification_svm.py
-|    |--- image_classification_svm_submission.py
-|    
 |--- letter_classification/
 |    |
 |    |--- letter_classification_svm.py
@@ -144,10 +91,6 @@ For this question, your submission needs to follow the format given below:
 ```
 <RollNumber>/
 |
-|--- cifar-10/
-|    |
-|    |--- image_classification_svm_submission.py
-|    
 |--- letter_classification/
 |    |
 |    |--- letter_classification_svm_submission.py
@@ -165,12 +108,11 @@ The evaluation script will run your submissions on the same dataset, the only di
 For example:
 
 ```
-python image_classification_svm_submission.py --data_dir='$HOME/cifar-10-data'
 python letter_classification_svm_submission.py --data_dir='$HOME/letter-classification-data'
 ```
 
-The output should contain two lines for the commands shown above; one for image classification metrics and one for letter classification metrics.
-Your submission should execute to completion (for both image classification and letter classification) in no more than __120 seconds__. The number of test samples for letter classification is 4000 and that for image classification is 10000.
+The output should contain one line for the command shown above; for letter classification metrics.
+Your submission should execute to completion in no more than __120 seconds__. The number of test samples for letter classification is 4000.
 
 __ALL THE BEST!__
 
