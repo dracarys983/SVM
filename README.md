@@ -175,5 +175,4 @@ Your submission should execute to completion (for both image classification and 
 __ALL THE BEST!__
 
 
-> ### If you are going through hell, keep going!                                     
->                                                 __- Sir Winston Churchill__
+> ### Sir Winston Churchill told this to his people to rouse their fighting spirit, "If you are going through hell, keep going."
