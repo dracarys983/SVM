@@ -40,7 +40,7 @@ Hence, you will get five sets of values for the above metrics. You should report
 
 The output of your code file should have one line with the four metric values for the best model:
 ```
--> python letter_classification_svm.py
+-> python letter_classification_svm.py --data_dir='<path_to_dataset_dir>'
 <accuracy_val>, <precision_val>, <recall_val>, <F-1_val>
 ```
 Mention your experiments and observations in your _final report_. 
@@ -62,7 +62,8 @@ The code files for this part are `image_classification_svm.py` and `image_classi
 for this part are similar to the letter classification task except that now instead of _one_ input file, the input data has
 been divided into _five_ parts and you have to read the five files into one array. To be clear though, here are the details:
 
-__You are provided with some parts of the pipeline, while some parts are left for you to
+This dataset contains five files (data\_batch\_1, .., data\_batch\_5) which are to be read such that all data is used for the train
+and validation splits. __You are provided with some parts of the pipeline, while some parts are left for you to
 code__. The parts where you need to write the code look like this:
 
 ```
@@ -86,7 +87,7 @@ Hence, you will get five sets of values for the above metrics. You should report
 
 The output of your code file should have one line with the four metric values for the best model:
 ```
--> python image_classification_svm.py
+-> python image_classification_svm.py --data_dir='<path_to_dataset_dir>'
 <accuracy_val>, <precision_val>, <recall_val>, <F-1_val>
 ```
 Mention your experiments and observations in your _final report_. 
@@ -174,4 +175,4 @@ Your submission should execute to completion (for both image classification and 
 __ALL THE BEST!__
 
 
-> If you are going through hell, keep going!                _-- Sir Winston Churchill_
+> If you are going through hell, keep going!\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ _- Sir Winston Churchill_
