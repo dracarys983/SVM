@@ -25,6 +25,8 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from sklearn.manifold.t_sne import TSNE
 
+import argparse, os, sys
+
 def unpickle(filename):
     """
     Function to read the binary pickled file for cifar-10
@@ -195,13 +197,31 @@ def SVM(train_data,
 
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('data_dir', default=None, type=string,
+            help='path to the directory containing the dataset file')
+
+    args = parser.parse_args()
+    if args.data_dir is None:
+        print "Usage: python letter_classification_svm.py --data_dir='<dataset dir path>'"
+        sys.exit()
+    else:
+        filename = glob.glob(args.data_dir, 'data_batch_*')
+        for fn in filename:
+            try os.path.exists(fn):
+                print "Using %s as the dataset file" % filename
+            except:
+                print "%s not present in %s. Please enter the correct dataset directory" % (filename, args.data_dir)
+                sys.exit()
+
     # Set the value for svm_kernel as required.
     svm_kernel = 'linear'
 
     """
     Get the input data using the provided function. You need to get the data
-    for all the five batches, so run a loop. Store the final X and Y as X_data
-    and Y_data. All images in X_data and labels in Y_data.
+    for all the five batches (paths to which are in the list contained in
+    filename), so run a loop. Store the final X and Y as X_data and Y_data.
+    All images in X_data and labels in Y_data.
     ==========================================================================
     """
 

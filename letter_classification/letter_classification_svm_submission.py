@@ -26,6 +26,8 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from sklearn.manifold.t_sne import TSNE
 
+import argparse, os, sys
+
 def get_input_data(filename):
     """
     Function to read the input data from the letter recognition data file.
@@ -174,12 +176,28 @@ def SVM(train_data,
 
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('data_dir', default=None, type=string,
+            help='path to the directory containing the dataset file')
+
+    args = parser.parse_args()
+    if args.data_dir is None:
+        print "Usage: python letter_classification_svm.py --data_dir='<dataset dir path>'"
+        sys.exit()
+    else:
+        filename = os.path.join(args.data_dir, 'letter_classification_train.data')
+        try os.path.exists(filename):
+            print "Using %s as the dataset file" % filename
+        except:
+            print "%s not present in %s. Please enter the correct dataset directory" % (filename, args.data_dir)
+            sys.exit()
+
     # Set the value for svm_kernel as required.
     svm_kernel = 'linear'
 
     """
     Get the input data using the provided function. Store the X and Y returned
-    as X_data and Y_data.
+    as X_data and Y_data. Use filename found above as the input to the function.
     ==========================================================================
     """
 

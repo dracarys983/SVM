@@ -107,27 +107,27 @@ SVM/
 |    |--- data_batch_*
 |    |--- image_classification_svm.py
 |    |--- image_classification_svm_submission.py
-|    |
+|    
 |--- letter_classification/
 |    |
 |    |--- letter_classification_svm.py
 |    |--- letter_classification_svm_submission.py
 |    |--- letter_classification_train.data
-|    |
+|    
 |--- stencils/
 |    |
 |    |--- stencilletter-*.jpg
-|    |
+|    
 |--- visualization_examples/
 |    |
 |    |--- linearly_separable.py
 |    |--- linearly_inseparable.py
 |    |--- plot_tsne.py
 |    |--- t-SNE_letters.pdf
-|    |
+|    
 |--- README.md
 |--- LICENSE
-|
+
 ```
 
 __Keep your dataset files in the respective folder for the task__. 
@@ -136,5 +136,42 @@ The files provided in the visualization examples folder is for understanding pur
 the working of the SVM and how the dataset looks like. t-SNE plot script for CIFAR-10 is not provided but you can modify the
 given script of get it online somewhere if you really want to visualize the t-SNE embeddings for it.
 
+### Submission Format
 
-ALL THE BEST!
+For this question, your submission needs to follow the format given below:
+
+```
+<RollNumber>/
+|
+|--- cifar-10/
+|    |
+|    |--- image_classification_svm_submission.py
+|    
+|--- letter_classification/
+|    |
+|    |--- letter_classification_svm_submission.py
+|    
+|--- README.md
+|--- Report.pdf
+
+```
+
+* Zip the top level directory and submit it with the name \<RollNumber\_SVM\>.zip.
+* README.md should contain a brief overview of the methods followed and which kernel-hyperparameter combinations were used.
+* Report.pdf should contain in-depth explanation about each kernel, the parameters used for them and the results obtained in each experiments (preferably graphical representations).
+
+The evaluation script will run your submissions on the same dataset, the only difference being your algorithm will now be trained on entire part of dataset given to you in this repository and tested on a new unseen part of the dataset.
+For example:
+
+```
+python image_classification_svm_submission.py --data_dir='$HOME/cifar-10-data'
+python letter_classification_svm_submission.py --data_dir='$HOME/letter-classification-data'
+```
+
+The output should contain two lines for the commands shown above; one for image classification metrics and one for letter classification metrics.
+Your submission should execute to completion (for both image classification and letter classification) in no more than __120 seconds__. The number of test samples for letter classification is 4000 and that for image classification is 10000.
+
+__ALL THE BEST!__
+
+
+> If you are going through hell, keep going!                _-- Sir Winston Churchill_
