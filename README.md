@@ -1,4 +1,4 @@
-## Assigment 2 (Qxx)
+## Assigment 2 (Q01)
 
 ### English letter classification using Support Vector Machines
 
@@ -43,7 +43,9 @@ The output of your code file should have one line with the four metric values fo
 -> python letter_classification_svm.py --data_dir='<path_to_dataset_dir>'
 <accuracy_val>, <precision_val>, <recall_val>, <F-1_val>
 ```
-Mention your experiments and observations in your _final report_. 
+Mention your experiments and observations in your _final report_. Analyze the discriminative nature of the features and
+find out the top two most discriminative features (You can also see how the model performs if you use just those two
+features).
 
 Once you know which model and hyperparameters work best, create that model in `letter_classification_svm_submission.py`,
 which is your final submission file. This will be tested on an unseen part of the dataset for testing it's effectiveness.
@@ -71,14 +73,13 @@ SVM/
 |    |--- linearly_separable.py
 |    |--- linearly_inseparable.py
 |    |--- plot_tsne.py
-|    |--- t-SNE_letters.pdf
 |    
 |--- README.md
 |--- LICENSE
 
 ```
 
-__Keep your dataset files in the respective folder for the task__. 
+__Keep your dataset files in the respective folder for the task__.
 
 The files provided in the visualization examples folder is for understanding purposes and might help you gain insights about
 the working of the SVM and how the dataset looks like. The python scripts are self-contained and can be run directly. Do not
