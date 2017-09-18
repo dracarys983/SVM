@@ -81,8 +81,9 @@ SVM/
 __Keep your dataset files in the respective folder for the task__. 
 
 The files provided in the visualization examples folder is for understanding purposes and might help you gain insights about
-the working of the SVM and how the dataset looks like. t-SNE plot script for CIFAR-10 is not provided but you can modify the
-given script of get it online somewhere if you really want to visualize the t-SNE embeddings for it.
+the working of the SVM and how the dataset looks like. The python scripts are self-contained and can be run directly. Do not
+change the directory structure though; if you do, the scripts will break and you will have to change some paths hardcoded in
+there.
 
 ### Submission Format
 
@@ -103,6 +104,7 @@ For this question, your submission needs to follow the format given below:
 * Zip the top level directory and submit it with the name \<RollNumber\_SVM\>.zip.
 * README.md should contain a brief overview of the methods followed and which kernel-hyperparameter combinations were used.
 * Report.pdf should contain in-depth explanation about each kernel, the parameters used for them and the results obtained in each experiments (preferably graphical representations).
+* Try to explain the kernel, what each hyperparameter means in the kernel equation for SVM and the observations.
 
 The evaluation script will run your submissions on the same dataset, the only difference being your algorithm will now be trained on entire part of dataset given to you in this repository and tested on a new unseen part of the dataset.
 For example:

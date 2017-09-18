@@ -75,7 +75,7 @@ def plot_embedding(X, Y, X_old, images, title=None):
 if __name__ == '__main__':
     letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q',
             'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-    paths = sorted(glob.glob('stencils/*'))
+    paths = sorted(glob.glob('../stencils/*'))
     img_path_dict = dict(zip(letters, paths))
 
     images = []
@@ -87,7 +87,7 @@ if __name__ == '__main__':
 
     images_dict = dict(zip(letters, images))
 
-    X, Y = get_input_data('../letter-recognition-train.data')
+    X, Y = get_input_data('../letter_classification/letter_classification_train.data')
     images = []
     for letter in Y:
         images.append(images_dict[letter])
