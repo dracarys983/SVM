@@ -177,7 +177,7 @@ def SVM(train_data,
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('data_dir', default=None, type=string,
+    parser.add_argument('--data_dir', default=None,
             help='path to the directory containing the dataset file')
 
     args = parser.parse_args()
@@ -186,8 +186,9 @@ if __name__ == '__main__':
         sys.exit()
     else:
         filename = os.path.join(args.data_dir, 'letter_classification_train.data')
-        try os.path.exists(filename):
-            print "Using %s as the dataset file" % filename
+        try:
+            if os.path.exists(filename):
+                print "Using %s as the dataset file" % filename
         except:
             print "%s not present in %s. Please enter the correct dataset directory" % (filename, args.data_dir)
             sys.exit()

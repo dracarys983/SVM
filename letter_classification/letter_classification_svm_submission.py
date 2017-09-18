@@ -4,9 +4,9 @@ Semester: Fall '17
 Professor: Gandhi, Vineet
 
 Assignment 2: SVM using scikit-learn.
-Skeleton code for implementing final SVM classifier for a
+Skeleton code for implementing SVM classifier for a
 character recognition dataset having precomputed features for
-each character. This file is the submission file.
+each character. This is your submission file.
 
 Dataset is taken from: https://archive.ics.uci.edu/ml/datasets/letter+recognition
 
@@ -177,7 +177,7 @@ def SVM(train_data,
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('data_dir', default=None, type=string,
+    parser.add_argument('--data_dir', default=None,
             help='path to the directory containing the dataset file')
 
     args = parser.parse_args()
@@ -186,8 +186,9 @@ if __name__ == '__main__':
         sys.exit()
     else:
         filename = os.path.join(args.data_dir, 'letter_classification_train.data')
-        try os.path.exists(filename):
-            print "Using %s as the dataset file" % filename
+        try:
+            if os.path.exists(filename):
+                print "Using %s as the dataset file" % filename
         except:
             print "%s not present in %s. Please enter the correct dataset directory" % (filename, args.data_dir)
             sys.exit()
@@ -228,7 +229,7 @@ if __name__ == '__main__':
         fold += 1
 
     """
-    Print out the accumulated metrics in the required output format.
+    Print out the accumulated metrics in a good format.
     ==========================================================================
     """
 
