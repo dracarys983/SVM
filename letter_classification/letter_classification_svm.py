@@ -13,7 +13,6 @@ Dataset is taken from: https://archive.ics.uci.edu/ml/datasets/letter+recognitio
 Remember
 --------
 1) SVM algorithms are not scale invariant.
-2) You might have to import more modules from sklearn.
 """
 
 from sklearn import svm

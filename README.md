@@ -1,5 +1,29 @@
 ## Assigment 2 (Q01)
 
+### Kernel Trick for separating linearly inseparable data using Perceptron
+
+In this part of the question, we will implement a kernel that maps the input 2D data (generated manually)
+into 3D kernelized data and separates it using a simple perceptron. Code is provided to visualize the 2D
+input data and the final decision surface.
+__You need to actually think about what kernel to use in order to make data linearly separable in 3D__.
+
+The code file for this part is `kernel_trick_perceptron.py`. Mention which kernels you tried in your report
+and also mention the results obtained, with the plots. Once you achieve the final desired kernel configuration,
+write that code in `kernel_trick_perceptron_submission.py`, which will be your final submission file.
+
+The parts where you have to write your code are indicated by:
+
+```
+======================================================================
+
+# YOUR CODE GOES HERE
+
+======================================================================
+```
+
+You are allowed to use scikit-learn for the Perceptron.
+
+
 ### English letter classification using Support Vector Machines
 
 In this part of the question, we will do english letter classification using a SVM.
@@ -58,6 +82,12 @@ When you clone this repository, you will get the following directory structure:
 ```
 SVM/
 |
+|--- kernel_trick/
+|    |
+|    |--- kernel_trick_perceptron.py
+|    |--- kernel_trick_perceptron_submission.py
+|    |--- linearly_inseparable.data
+|
 |--- letter_classification/
 |    |
 |    |--- letter_classification_svm.py
@@ -81,10 +111,10 @@ SVM/
 
 __Keep your dataset files in the respective folder for the task__.
 
-The files provided in the visualization examples folder is for understanding purposes and might help you gain insights about
+_The files provided in the visualization examples folder is for understanding purposes and might help you gain insights about
 the working of the SVM and how the dataset looks like. The python scripts are self-contained and can be run directly. Do not
 change the directory structure though; if you do, the scripts will break and you will have to change some paths hardcoded in
-there.
+there_.
 
 ### Submission Format
 
@@ -92,6 +122,10 @@ For this question, your submission needs to follow the format given below:
 
 ```
 <RollNumber>/
+|
+|--- kernel_trick/
+|    |
+|    |--- kernel_trick_perceptron_submission.py
 |
 |--- letter_classification/
 |    |
@@ -106,6 +140,7 @@ For this question, your submission needs to follow the format given below:
 * README.md should contain a brief overview of the methods followed and which kernel-hyperparameter combinations were used.
 * Report.pdf should contain in-depth explanation about each kernel, the parameters used for them and the results obtained in each experiments (preferably graphical representations).
 * Try to explain the kernel, what each hyperparameter means in the kernel equation for SVM and the observations.
+* For kernel trick part, the plots for initial points and the 3D decision surface should be included in the Report. Mention the mathematical expression for the kernel used as well.
 
 The evaluation script will run your submissions on the same dataset, the only difference being your algorithm will now be trained on entire part of dataset given to you in this repository and tested on a new unseen part of the dataset.
 For example:

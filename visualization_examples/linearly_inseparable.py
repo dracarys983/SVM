@@ -32,12 +32,25 @@ def generate_training_data_2D():
     -------
     c1, c2: Points belonging to the two classes
     """
-    c11 = np.random.uniform(-0.50, 1.50, 100)
-    c12 = np.random.uniform(-2.50, 1.50, 100)
-    c21 = np.random.uniform(-1.50, 0.50, 100)
-    c22 = np.random.uniform(-1.50, 2.50, 100)
+    c11 = np.random.uniform(-1.50, 1.50, 100)
+    c12 = np.random.uniform(-1.50, 1.50, 100)
+    c2111 = np.random.uniform(-3.50, -2.50, 25)
+    c2112 = np.random.uniform(2.50, 3.50, 25)
+    c2121 = np.random.uniform(-3.50, 3.50, 25)
+    c2122 = np.random.uniform(-3.50, 3.50, 25)
+    c2211 = np.random.uniform(-3.50, 3.50, 25)
+    c2212 = np.random.uniform(-3.50, 3.50, 25)
+    c2221 = np.random.uniform(-3.50, -2.50, 25)
+    c2222 = np.random.uniform(2.50, 3.50, 25)
+
     c1 = np.array([[i, j] for i, j in zip(c11, c12)])
-    c2 = np.array([[i, j] for i, j in zip(c21, c22)])
+
+    c211 = np.array([[i, j] for i, j in zip(c2111, c2211)])
+    c212 = np.array([[i, j] for i, j in zip(c2112, c2212)])
+    c221 = np.array([[i, j] for i, j in zip(c2121, c2221)])
+    c222 = np.array([[i, j] for i, j in zip(c2122, c2222)])
+
+    c2 = np.concatenate([c211, c212, c221, c222], axis=0)
 
     points = plt.figure()
     plt.plot(c1[:, 0], c1[:, 1], 'o', c2[:, 0], c2[:, 1], '*')
@@ -127,7 +140,7 @@ def get_fitted_svm(X, Y):
     decision surface; lower C prefers a simple decision boundary
     and hence has chances of higher misclassification rate.
     """
-    C = 1000.0             # SVM Regularization Parameter
+    C = 10.0             # SVM Regularization Parameter
     """
     Different classifiers using the various kernels available.
     -> Polynomial kernels with different degrees work for different
