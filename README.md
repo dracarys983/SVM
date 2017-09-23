@@ -1,4 +1,4 @@
-## Assigment 2 (Q01)
+## Assigment 2 (Q1)
 
 ### Kernel Trick for separating linearly inseparable data using Perceptron
 
@@ -121,7 +121,7 @@ there_.
 For this question, your submission needs to follow the format given below:
 
 ```
-<RollNumber>/
+Q1/
 |
 |--- kernel_trick/
 |    |
@@ -136,7 +136,6 @@ For this question, your submission needs to follow the format given below:
 
 ```
 
-* Zip the top level directory and submit it with the name \<RollNumber\_SVM\>.zip.
 * README.md should contain a brief overview of the methods followed and which kernel-hyperparameter combinations were used.
 * Report.pdf should contain in-depth explanation about each kernel, the parameters used for them and the results obtained in each experiments (preferably graphical representations).
 * Try to explain the kernel, what each hyperparameter means in the kernel equation for SVM and the observations.
