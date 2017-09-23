@@ -121,7 +121,7 @@ there_.
 For this question, your submission needs to follow the format given below:
 
 ```
-Q1/
+q1/
 |
 |--- kernel_trick/
 |    |
